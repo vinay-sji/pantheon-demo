@@ -1,0 +1,348 @@
+<?php
+
+/**
+ * @file
+ * Contains Tara theme override and preprocess functions.
+ */
+use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
+use \Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\NodeType;
+/**
+ * Sanitise input urls.
+ */
+function santise_val_urls($url) {
+	if ($url != '') {
+
+		// Sanitise (remove all illegal characters) from url.
+		$url = filter_var($url, FILTER_SANITIZE_URL);
+
+		// Validate url.
+		if (filter_var($url, FILTER_VALIDATE_URL) == TRUE) {
+			$url = $url;
+		} else {
+			$url = '#';
+		}
+		return $url;
+	}
+}
+
+/* *
+ * Tara page preprocess.
+ * Define variables for theme settings.
+ */
+function tara_childtheme_preprocess_page(array &$variables) {
+	$config = \Drupal::config('system.site');
+	$variables['site_name'] = $config->get('name');
+	$variables['site_slogan'] = $config->get('slogan');
+	// $variables['slider_show'] = theme_get_setting('slider_show', 'tara');
+	$variables['slider_show'] = false;
+	$variables['slider_code'] = theme_get_setting('slider_code', 'tara');
+	// $variables['all_icons_show'] = theme_get_setting('all_icons_show', 'tara');
+	$variables['all_icons_show'] = false;
+	$variables['facebook_url'] = santise_val_url(theme_get_setting('facebook_url', 'tara'));
+	$variables['twitter_url'] = santise_val_url(theme_get_setting('twitter_url', 'tara'));
+	$variables['instagram_url'] = santise_val_url(theme_get_setting('instagram_url', 'tara'));
+	$variables['linkedin_url'] = santise_val_url(theme_get_setting('linkedin_url', 'tara'));
+	$variables['youtube_url'] = santise_val_url(theme_get_setting('youtube_url', 'tara'));
+  	$variables['vk_url'] = santise_val_url(theme_get_setting('vk_url', 'tara'));
+	$variables['vimeo_url'] = santise_val_url(theme_get_setting('vimeo_url', 'tara'));
+	$variables['whatsapp_url'] = santise_val_url(theme_get_setting('whatsapp_url', 'tara'));
+	$variables['github_url'] = santise_val_url(theme_get_setting('github_url', 'tara'));
+	$variables['telegram_url'] = santise_val_url(theme_get_setting('telegram_url', 'tara'));
+	$variables['scrolltotop_on'] = theme_get_setting('scrolltotop_on', 'tara');
+	$variables['copyright_text'] = theme_get_setting('copyright_text', 'tara');
+  	$variables['front_sidebar'] = theme_get_setting('front_sidebar', 'tara');
+
+  	if ($variables['user']->isAuthenticated()){
+	# gets username
+  		$user_logged_in_name = $variables['user']->getDisplayName();
+  	}
+	$logged_in = \Drupal::currentUser()->isAuthenticated();
+
+	$variables['anonymous'] = \Drupal::currentUser()->isAnonymous();
+}
+
+/* *
+ * Node preprocess.
+ */
+function tara_childtheme_preprocess_node(array &$variables) {
+	$node = \Drupal::routeMatch()->getParameter('node');
+	$variables['nid'] = $node->id();
+	$variables['node_author_pic'] = theme_get_setting('node_author_pic', 'tara');
+	$variables['node_tags'] = theme_get_setting('node_tags', 'tara');
+
+	$roles = \Drupal::currentUser()->getRoles();
+	$access = false;
+	$variables['need_approved'] = false;
+	$variables['service_approved'] = false;
+
+	// Verify Access
+	if (in_array("administrator", $roles) || in_array("superadmin", $roles) || in_array("agency_admin", $roles)){
+		$access = true;
+	}
+	// Need Approved Button
+	if ($variables['node']->hasField('field_approved')){
+		$need_approved = $variables['node']->get('field_approved')->getValue();
+		if($need_approved[0]['value'] == 0 && $access == true){
+			$variables['need_approved'] = true;
+		}
+	}
+	// Service Approved Button
+	else if ($variables['node']->hasField('field_approved_service')){
+		$service_approved = $variables['node']->get('field_approved_service')->getValue();
+		if($service_approved[0]['value'] == 0 && $access == true){
+			$variables['service_approved'] = true;
+		}
+	}
+
+	$uid = \Drupal::currentUser()->id();
+	$author_id = $variables['node']->getOwner()->id();
+	if ($author_id == $uid) {
+	  $variables['is_author'] = TRUE;
+	}
+	else {
+	  $variables['is_author'] = FALSE;
+	}
+
+	// button code active /pending
+	if ($variables['node']->hasField('field_status')) {
+		// $service['a']=$variables['node']->field_status->value = 'Pending';
+		$variables['node']->get('field_status')->getValue();
+		if ($variables['node']->get('field_status')->value == 'Pending') {
+			$variables['support_status'] = TRUE;
+
+		}
+		else {
+			$variables['support_status'] = FALSE;
+		}
+
+		if($variables['node']->get('field_status')->value == 'Fullfilled') {
+			$variables['support_status1'] = TRUE;
+
+		}
+		else {
+			$variables['support_status1'] = FALSE;
+		}
+		if ($variables['node']->get('field_status')->value == 'Active') {
+			$variables['support_status2'] = TRUE;
+
+		}
+		else {
+			$variables['support_status2'] = FALSE;
+		}
+
+
+	}
+	if ($variables['node']->hasField('field_vibility')) {
+		// $service['a']=$variables['node']->field_status->value = 'Pending';
+		$variables['node']->get('field_vibility')->getValue();
+		if($variables['node']->get('field_vibility')->value == 'Pending') {
+			$variables['need_status'] = TRUE;
+
+		}
+		else {
+			$variables['need_status'] = FALSE;
+		}
+		if ($variables['node']->get('field_vibility')->value == 'Fullfilled') {
+			$variables['need_status1'] = TRUE;
+
+		}
+		else {
+			$variables['need_status1'] = FALSE;
+		}
+		if ($variables['node']->get('field_vibility')->value == 'Active') {
+			$variables['need_status2'] = TRUE;
+
+		}
+		else {
+			$variables['need_status2'] = FALSE;
+		}
+	}
+
+}
+
+
+/* *
+ * Comment preprocess.
+ */
+function tara_childtheme_preprocess_comment(array &$variables) {
+	$variables['comment_user_pic'] = theme_get_setting('comment_user_pic', 'tara');
+}
+
+/**
+ * Html preprocess for Tara theme.
+ * Adds body classes if certain regions have content.
+ * Used for creating different page layout.
+ */
+function tara_childtheme_preprocess_html(&$variables) {
+  $variables['base_path'] = base_path();
+  $variables['google_font'] = theme_get_setting('google_font', 'tara');
+  // Add variables for theme Settings
+  $variables['css_extra'] = theme_get_setting('css_extra', 'tara');
+  $variables['css_code'] = theme_get_setting('css_code', 'tara');
+	// Add class to body for different page layout.
+	if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+		$variables['attributes']['class'][] = 'two-sidebar';
+	}
+	elseif (!empty($variables['page']['sidebar_first'])) {
+		$variables['attributes']['class'][] = 'one-sidebar';
+		$variables['attributes']['class'][] = 'sidebar-left';
+	}
+	elseif (!empty($variables['page']['sidebar_second'])) {
+		$variables['attributes']['class'][] = 'one-sidebar';
+		$variables['attributes']['class'][] = 'sidebar-right';
+	}
+	else {
+		$variables['attributes']['class'][] = 'no-sidebar';
+	}
+	// $variables['slider_show'] = theme_get_setting('slider_show', 'tara');
+	$variables['slider_show'] = false;
+  	$variables['slider_time'] = theme_get_setting('slider_time', 'tara');
+  	$variables['slider_dots'] = theme_get_setting('slider_dots', 'tara');
+	$variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+	/* Slider image */
+	$variables['slider_image'] = theme_get_setting('slider_image', 'tara');
+	$slider_image_id = theme_get_setting('slider_image', 'tara');
+	if (!empty($slider_image_id)) {
+		$slider_image_file = File::load($slider_image_id[0]);
+		$slider_image_file->status = FILE_STATUS_PERMANENT;
+		$slider_image_file->save();
+		$slider_image_file_usage = \Drupal::service('file.usage');
+		$slider_image_file_usage->add($slider_image_file, 'tara', 'theme', $slider_image_id[0]);
+	};
+	if (!empty($slider_image_file)) {
+    $imageuri = $slider_image_file->getFileUri();
+    $variables['slider_image_path'] = file_create_url($imageuri);
+	};
+}
+
+/* *
+ * Add current page to breadcrumb.
+ */
+function tara_childtheme_preprocess_breadcrumb(&$variables) {
+	$request = \Drupal::request();
+	$route_match = \Drupal::routeMatch();
+	$page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+	if (empty($page_title)) {
+		$variables['breadcrumb'][] = [
+			'text' => $page_title,
+		];
+		// Add cache context based on url.
+		$variables['#cache']['contexts'][] = 'url';
+	}
+	// Remove duplicate links from the breadcrumb trail.
+	if (!empty($variables['breadcrumb'])) {
+		$prev_link = NULL;
+	
+		// Loop over each link.
+		foreach ($variables['breadcrumb'] as $key => $current_link) {
+		  if (empty($key)) {
+			continue;
+		  }
+	
+		  // Look to see if there was a previous link. If there isn't then it means
+		  // it was removed from the array already.
+		  if (isset($variables['breadcrumb'][$key+1])) {
+			$prev_link = $variables['breadcrumb'][$key+1];
+		  }
+	
+		  // Only proceed if a previous link was found.
+		  if (!empty($prev_link)) {
+			// Check if the previous link's title is the same as the current link's
+			// title.
+			if ($prev_link['text'] == $current_link['text']) {
+			  // Remove the current link.
+			  unset($variables['breadcrumb'][$key-1]);
+			}
+		  }
+		}
+	  }
+ }
+
+
+/**
+ * Implements THEME_preprocess_page_title()
+ */
+function tara_childtheme_preprocess_page_title(&$variables) {
+	if ($variables['title'] == 'Create Private Message'){
+		$variables['title']= t('Send Message');
+	  }
+
+}
+
+/**
+ * Implements THEME_preprocess_views_view_grid()
+ */
+function tara_childtheme_preprocess_views_view_grid(&$variables) {
+    $route = \Drupal::routeMatch()->getRouteObject();
+    $variables['view_id'] = $route->getDefault('view_id');
+    $variables['display_id'] = $route->getDefault('display_id');	
+}
+
+// css for view cta button
+
+function tara_childtheme_form_alter(&$form, &$form_state, $form_id) {
+	if ($form_id=='views_exposed_form') { 
+		$form['actions']['submit']['#attributes']['class'][] = 'btn';
+	}
+	if ($form_id == 'private_message_add_form') {
+		$form['back'] = array(
+			'#type' => 'button',
+			'#value' => t('Back'),
+			'#weight' => 10,
+			'#attributes' => array(
+			'onclick' => 'window.history.back();return false;',
+			),
+		);
+	}
+}
+
+
+/**
+ * Implements THEME_preprocess_menu__main()
+ */
+function weshare_preprocess_menu__main(&$variables) {
+    if(\Drupal::currentUser()->isAnonymous()) {
+        unset($variables['items']);
+    }
+
+    $current_user = \Drupal::currentUser()->id();
+    $unreadMessages = 0;
+
+    // Query to get current user's all threads.
+    $query = \Drupal::database()->select('pm_thread_history', 'pth')
+    ->fields('pth')
+    ->condition('pth.uid', $current_user, '=');
+
+    $results = $query->execute()->fetchAll();
+
+    foreach ($results as $key => $value) {
+        $currentUserThreads = $value->thread_id;
+        $threadAccessTime = $value->access_timestamp;
+
+        // Query to get last updated time of current user.
+        $threadLastUpdateTime = \Drupal::database()->select('private_message_threads', 'pmt')
+        ->fields('pmt')
+        ->condition('pmt.id', $currentUserThreads, '=');
+
+        $resultForThreadLastUpdate = $threadLastUpdateTime->execute()->fetchAll();
+
+        // Setting the count for the number of unread messages.
+        foreach ($resultForThreadLastUpdate as $resultForThreadLastUpdateKey => $resultForThreadLastUpdateValue) {
+            $threadUpdateTime = $resultForThreadLastUpdateValue->updated;
+
+            if ($threadUpdateTime > $threadAccessTime) {
+                $unreadMessages++;
+            }
+        }
+    }
+
+    foreach ($variables['items'] as $key => $value) {
+  			// Setting the unread messages variable.
+        if ($value['title'] == "Inbox") {            
+            $variables['items'][$key]['unreadMessages'] = $unreadMessages;
+            $variables['#cache']['max-age'] = 0;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+uuid: 3117d7b3-98bc-4564-aaee-1825c641be16
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.agency_admin
+  module:
+    - user
+id: user_remove_role_action.agency_admin
+label: 'Remove the Agency Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: agency_admin

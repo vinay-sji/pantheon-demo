@@ -1,0 +1,22 @@
+uuid: 10086898-d02e-4e03-a43b-41825c1e4f47
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tara_subtheme
+_core:
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
+id: tara_subtheme_local_tasks
+theme: tara_subtheme
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

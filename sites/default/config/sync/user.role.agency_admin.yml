@@ -1,0 +1,88 @@
+uuid: 1567ec84-be5c-4972-8c8d-e94f5b0c4701
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - node.type.needs
+    - node.type.services
+    - taxonomy.vocabulary.agency
+    - taxonomy.vocabulary.need
+  module:
+    - comment
+    - content_access
+    - field_permissions
+    - field_ui
+    - filter
+    - message
+    - node
+    - private_message
+    - shortcut
+    - system
+    - taxonomy
+id: agency_admin
+label: 'Agency Admin'
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access taxonomy overview'
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer comment types'
+  - 'administer comments'
+  - 'administer content types'
+  - 'administer message form display'
+  - 'administer message templates'
+  - 'administer messages'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer private message module'
+  - 'administer private messages'
+  - 'administer private_message form display'
+  - 'administer private_message_thread form display'
+  - 'administer shortcuts'
+  - 'administer users'
+  - 'create field_approval_required'
+  - 'create field_approved'
+  - 'create field_approved_service'
+  - 'create field_rejected'
+  - 'create needs content'
+  - 'create services content'
+  - 'create terms in agency'
+  - 'create terms in need'
+  - 'delete own needs content'
+  - 'delete own services content'
+  - 'edit any needs content'
+  - 'edit any services content'
+  - 'edit field_approval_required'
+  - 'edit field_approved'
+  - 'edit field_approved_service'
+  - 'edit field_rejected'
+  - 'edit own comments'
+  - 'edit own field_approval_required'
+  - 'edit own field_approved'
+  - 'edit own field_approved_service'
+  - 'edit own field_rejected'
+  - 'edit own needs content'
+  - 'edit own services content'
+  - 'edit terms in agency'
+  - 'grant content access'
+  - 'grant own content access'
+  - 'overview messages'
+  - 'post comments'
+  - 'use private messaging system'
+  - 'use text format restricted_html'
+  - 'view field_approval_required'
+  - 'view field_approved'
+  - 'view field_approved_service'
+  - 'view field_rejected'
+  - 'view own field_approval_required'
+  - 'view own field_approved'
+  - 'view own field_approved_service'
+  - 'view own field_rejected'
+  - 'view the administration theme'

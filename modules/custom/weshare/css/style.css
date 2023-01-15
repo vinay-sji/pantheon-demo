@@ -1,0 +1,10 @@
+form.node-form {
+  position: relative;
+}
+
+input#s1, input#n1 {
+  margin-top: 0;
+  position: absolute;
+  top: -31px;
+  left: 194px;
+}

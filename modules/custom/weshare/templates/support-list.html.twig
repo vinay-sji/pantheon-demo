@@ -1,0 +1,11 @@
+{{ dump(services) }}
+<h1>Services List</h1>
+{% if services | length %}
+<ul>
+{% for item in services %}
+<li><a href='{{ item.toUrl.toString }}'>{{ item.label }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+<p>There are no services</p>
+{% endif %}

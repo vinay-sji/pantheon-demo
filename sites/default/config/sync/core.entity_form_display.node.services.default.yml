@@ -1,0 +1,298 @@
+uuid: 4f15ff6b-5358-4dad-a382-fe3afd01071a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.services.body
+    - field.field.node.services.field_add_service_video_url
+    - field.field.node.services.field_approved_service
+    - field.field.node.services.field_comments
+    - field.field.node.services.field_created_by_agency_support
+    - field.field.node.services.field_protected
+    - field.field.node.services.field_protection_settings_servi
+    - field.field.node.services.field_rejected
+    - field.field.node.services.field_service_agencies
+    - field.field.node.services.field_service_category
+    - field.field.node.services.field_service_description
+    - field.field.node.services.field_service_document
+    - field.field.node.services.field_service_images
+    - field.field.node.services.field_service_item_or_service_ha
+    - field.field.node.services.field_service_location_is_same
+    - field.field.node.services.field_service_method_of_delivery
+    - field.field.node.services.field_service_offer_expires
+    - field.field.node.services.field_service_pick_up_service_lo
+    - field.field.node.services.field_service_types
+    - field.field.node.services.field_service_video_or_audio
+    - field.field.node.services.field_status
+    - field.field.node.services.field_value
+    - field.field.node.services.field_visible
+    - image.style.thumbnail
+    - node.type.services
+  module:
+    - comment
+    - datetime
+    - field_group
+    - file
+    - image
+    - link
+    - path
+    - term_reference_tree
+    - text
+third_party_settings:
+  field_group:
+    group_service_properties:
+      children:
+        - field_visible
+        - title
+        - field_status
+        - field_service_description
+        - field_value
+        - field_service_offer_expires
+        - field_service_method_of_delivery
+        - field_service_pick_up_service_lo
+      label: 'Service properties'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_classification:
+      children:
+        - field_service_agencies
+        - field_service_types
+        - field_service_category
+      label: Classification
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_media:
+      children:
+        - field_service_images
+        - field_add_service_video_url
+        - field_service_document
+        - field_service_video_or_audio
+      label: Media
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_protection_settings:
+      children:
+        - field_protected
+        - field_protection_settings_servi
+      label: 'Protection Settings'
+      region: hidden
+      parent_name: ''
+      weight: 16
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.services.default
+targetEntityType: node
+bundle: services
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_add_service_video_url:
+    type: link_default
+    weight: 30
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_approved_service:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_comments:
+    type: comment_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_created_by_agency_support:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_rejected:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_service_agencies:
+    type: options_buttons
+    weight: 34
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_service_category:
+    type: term_reference_tree
+    weight: 36
+    region: content
+    settings:
+      start_minimized: true
+      leaves_only: false
+      select_parents: true
+      cascading_selection: 0
+      max_depth: 0
+    third_party_settings: {  }
+  field_service_description:
+    type: text_textarea_with_summary
+    weight: 15
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_service_document:
+    type: file_generic
+    weight: 31
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_service_images:
+    type: image_image
+    weight: 28
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_service_method_of_delivery:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_service_offer_expires:
+    type: datetime_default
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_service_pick_up_service_lo:
+    type: text_textarea_with_summary
+    weight: 20
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_service_types:
+    type: options_select
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_service_video_or_audio:
+    type: file_generic
+    weight: 32
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_status:
+    type: options_buttons
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_value:
+    type: number
+    weight: 17
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_visible:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_protected: true
+  field_protection_settings_servi: true
+  field_service_item_or_service_ha: true
+  field_service_location_is_same: true
+  promote: true
+  sticky: true

@@ -1,0 +1,27 @@
+uuid: 2b560095-4384-47de-9439-4b5c7f8fcef7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_audio
+    - node.type.needs
+  module:
+    - file
+id: node.needs.field_video_audio
+field_name: field_video_audio
+entity_type: node
+bundle: needs
+label: Video/Audio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp3 mp4'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,28 @@
+uuid: 6d0964a2-142a-4505-8f8d-2e6c52b23312
+langcode: en
+status: true
+dependencies:
+  module:
+    - private_message
+    - system
+  theme:
+    - tara_childtheme
+id: privatemessageinbox_2
+theme: tara_childtheme
+region: content
+weight: 0
+provider: null
+plugin: private_message_inbox_block
+settings:
+  id: private_message_inbox_block
+  label: 'Message Inbox'
+  label_display: '0'
+  provider: private_message
+  thread_count: 5
+  ajax_load_count: 5
+  ajax_refresh_rate: 15
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /inbox

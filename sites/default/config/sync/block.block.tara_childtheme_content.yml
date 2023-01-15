@@ -1,0 +1,22 @@
+uuid: cb2db867-a67e-4896-9ee7-2acc362bf0fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tara_childtheme
+_core:
+  default_config_hash: 7W5m1cGZjEB4_o0Di0lrmtWuUx1Wft0TuAVyUSgPUwQ
+id: tara_childtheme_content
+theme: tara_childtheme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: f913f343-d5c0-4f9e-b872-d92db05e1678
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - weshare
+  theme:
+    - tara_childtheme
+id: supportlistblock
+theme: tara_childtheme
+region: content
+weight: 0
+provider: null
+plugin: support_list_block
+settings:
+  id: support_list_block
+  label: 'Support List block'
+  label_display: '0'
+  provider: weshare
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /services

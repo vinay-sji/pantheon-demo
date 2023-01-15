@@ -1,0 +1,15 @@
+uuid: 9904f111-4d34-4a07-9b9b-01183707a989
+langcode: en
+status: true
+dependencies: {  }
+name: need_service_image_300x200
+label: 'Need Service Image 300x200'
+effects:
+  4f53a9b6-5a88-4a63-a4b6-b28b0a04c17d:
+    uuid: 4f53a9b6-5a88-4a63-a4b6-b28b0a04c17d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200
+      anchor: center-center

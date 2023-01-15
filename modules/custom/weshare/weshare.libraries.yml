@@ -1,0 +1,8 @@
+weshare_js:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+  js:
+  dependencies:
+    - core/jquery

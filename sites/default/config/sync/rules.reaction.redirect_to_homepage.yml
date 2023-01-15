@@ -1,0 +1,38 @@
+uuid: 757ba055-3df8-46fc-ae14-13af5c23a4df
+langcode: en
+status: true
+dependencies: {  }
+id: redirect_to_homepage
+label: 'Redirect to Homepage'
+events:
+  -
+    event_name: rules_user_login
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: c600bc73-0b7b-4bbf-9af1-47d53c4d9c26
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: a7c41cb8-91c5-499b-bf28-6987011c3ec7
+    weight: 0
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: e30a7f1d-0b1e-4a5e-9bef-15913c4e47e3
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 6883a5c8-b643-452d-9c30-a0c0ec92e276
+        weight: 0
+        action_id: rules_page_redirect
+        context_values:
+          url: /
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }

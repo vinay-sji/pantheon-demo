@@ -1,0 +1,39 @@
+uuid: d26fccb2-6257-4632-a50d-0845c9679533
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.private_message_author
+    - field.field.user.user.field_agency_company
+    - field.field.user.user.field_agency_company_no
+    - field.field.user.user.field_approval_required
+    - field.field.user.user.field_create_agency_or_company
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_special_talents_other_spec
+    - field.field.user.user.user_picture
+  module:
+    - user
+_core:
+  default_config_hash: 5VkjdDDe_kM-giLC61z36ACn6Z2eMjaH63Rh6adWWpw
+id: user.user.private_message_author
+targetEntityType: user
+bundle: user
+mode: private_message_author
+content:
+  linked_username:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_agency_company: true
+  field_agency_company_no: true
+  field_approval_required: true
+  field_create_agency_or_company: true
+  field_first_name: true
+  field_last_name: true
+  field_special_talents_other_spec: true
+  member_for: true
+  private_message_link: true
+  user_picture: true

@@ -1,0 +1,22 @@
+uuid: 45b50e7f-2862-427d-828d-0006fa180709
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tara_childtheme
+_core:
+  default_config_hash: pr3QYCTcRvWFwZ4-uxct2vWlDTF_liV-1RLiNFE5a-g
+id: tara_childtheme_local_tasks
+theme: tara_childtheme
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

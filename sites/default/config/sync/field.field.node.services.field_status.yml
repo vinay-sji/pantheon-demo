@@ -1,0 +1,23 @@
+uuid: b5544c37-ff58-4114-a4b6-e4f7691fa727
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status
+    - node.type.services
+  module:
+    - options
+id: node.services.field_status
+field_name: field_status
+entity_type: node
+bundle: services
+label: Status
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Active
+default_value_callback: ''
+settings: {  }
+field_type: list_string

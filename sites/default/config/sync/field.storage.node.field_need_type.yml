@@ -1,0 +1,27 @@
+uuid: 5d1531ef-8aa4-4985-9719-9fd693d89d34
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_need_type
+field_name: field_need_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'This is a need for an item'
+      label: 'This is a need for an item'
+    -
+      value: 'This is a need for a service'
+      label: 'This is a need for a service'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

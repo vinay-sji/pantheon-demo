@@ -1,0 +1,23 @@
+uuid: 1967592f-da35-4536-ab22-eff10e2bd416
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_protected
+    - node.type.services
+id: node.services.field_protected
+field_name: field_protected
+entity_type: node
+bundle: services
+label: Protected
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,24 @@
+uuid: 74b06f10-b178-4d72-bfe9-6070ccb5eb2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_approval_required
+  module:
+    - user
+id: user.user.field_approval_required
+field_name: field_approval_required
+entity_type: user
+bundle: user
+label: 'Approval Required'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

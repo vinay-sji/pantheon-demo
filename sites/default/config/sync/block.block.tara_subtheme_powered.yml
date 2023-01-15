@@ -1,0 +1,22 @@
+uuid: d17e8ffb-dddc-478d-b5bd-43ebec8d137c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tara_subtheme
+_core:
+  default_config_hash: I6Esh8cDlPdl2POZg4MOSRUrQNYA1UNCJCxL2yqT_wc
+id: tara_subtheme_powered
+theme: tara_subtheme
+region: header_top
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 1cf4bd4c-0072-4846-a846-48e0aa29e1f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_create_agency_or_company
+field_name: field_create_agency_or_company
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

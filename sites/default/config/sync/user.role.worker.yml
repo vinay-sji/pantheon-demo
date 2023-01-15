@@ -1,0 +1,40 @@
+uuid: 93bfd4ad-a858-4dd6-8be0-0cd8f16bac9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.needs
+    - node.type.services
+  module:
+    - comment
+    - content_access
+    - field_ui
+    - message
+    - node
+    - private_message
+    - system
+    - webform
+id: worker
+label: Worker
+weight: 6
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access user profiles'
+  - 'administer message form display'
+  - 'administer message templates'
+  - 'administer messages'
+  - 'administer node display'
+  - 'create needs content'
+  - 'create services content'
+  - 'create webform'
+  - 'delete own needs content'
+  - 'delete own services content'
+  - 'edit own needs content'
+  - 'edit own services content'
+  - 'grant content access'
+  - 'overview messages'
+  - 'post comments'
+  - 'use private messaging system'
+  - 'view the administration theme'

@@ -1,0 +1,23 @@
+uuid: e49d9774-9f15-4df7-9acc-c8c28109b730
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approved_service
+    - node.type.services
+id: node.services.field_approved_service
+field_name: field_approved_service
+entity_type: node
+bundle: services
+label: Approved
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

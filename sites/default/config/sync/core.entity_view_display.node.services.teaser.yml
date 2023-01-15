@@ -1,0 +1,76 @@
+uuid: ece951b6-a144-4ce8-b1bb-6acfb1ac1c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.services.body
+    - field.field.node.services.field_add_service_video_url
+    - field.field.node.services.field_approved_service
+    - field.field.node.services.field_comments
+    - field.field.node.services.field_created_by_agency_support
+    - field.field.node.services.field_protected
+    - field.field.node.services.field_protection_settings_servi
+    - field.field.node.services.field_rejected
+    - field.field.node.services.field_service_agencies
+    - field.field.node.services.field_service_category
+    - field.field.node.services.field_service_description
+    - field.field.node.services.field_service_document
+    - field.field.node.services.field_service_images
+    - field.field.node.services.field_service_item_or_service_ha
+    - field.field.node.services.field_service_location_is_same
+    - field.field.node.services.field_service_method_of_delivery
+    - field.field.node.services.field_service_offer_expires
+    - field.field.node.services.field_service_pick_up_service_lo
+    - field.field.node.services.field_service_types
+    - field.field.node.services.field_service_video_or_audio
+    - field.field.node.services.field_status
+    - field.field.node.services.field_value
+    - field.field.node.services.field_visible
+    - node.type.services
+  module:
+    - text
+    - user
+id: node.services.teaser
+targetEntityType: node
+bundle: services
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_add_service_video_url: true
+  field_approved_service: true
+  field_comments: true
+  field_created_by_agency_support: true
+  field_paragraph: true
+  field_protected: true
+  field_protection_settings_servi: true
+  field_rejected: true
+  field_service_agencies: true
+  field_service_category: true
+  field_service_description: true
+  field_service_document: true
+  field_service_images: true
+  field_service_item_or_service_ha: true
+  field_service_location_is_same: true
+  field_service_method_of_delivery: true
+  field_service_offer_expires: true
+  field_service_pick_up_service_lo: true
+  field_service_types: true
+  field_service_video_or_audio: true
+  field_status: true
+  field_value: true
+  field_visible: true
+  private_message_link: true

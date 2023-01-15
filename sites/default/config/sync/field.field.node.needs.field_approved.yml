@@ -1,0 +1,23 @@
+uuid: ecdb6536-ba17-4439-b502-c82dfb4303ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approved
+    - node.type.needs
+id: node.needs.field_approved
+field_name: field_approved
+entity_type: node
+bundle: needs
+label: Approved
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

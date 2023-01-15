@@ -1,0 +1,101 @@
+weshare.fulfill_need:
+  path: '/ajax/fulfill-need'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::fulfillNeedHandler'
+    _title: ''
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+weshare.fulfill_support:
+  path: '/ajax/fulfill-support'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::fulfillSupportHandler'
+    _title: ''
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+# weshare.approve_need:
+#   path: '/approve-need/{nid}'
+#   defaults:
+#     _controller: '\Drupal\weshare\Controller\WeshareController::approveNeedHandler'
+#     _title: ''
+#   methods: [GET]
+#   requirements:
+#    _access: 'TRUE'
+
+# weshare.approve_service:
+#   path: '/approve-service/{nid}'
+#   defaults:
+#     _controller: '\Drupal\weshare\Controller\WeshareController::approveServiceHandler'
+#     _title: ''
+#   methods: [GET]
+#   requirements:
+#    _access: 'TRUE'
+
+weshare.services2:
+  path: '/services'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::services'
+    _title: 'Available Support'
+  requirements:
+    _permission: 'access content'
+
+weshare.fulfilled:
+  path: '/ajax/fulfilled'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::fulfilledNeedHandler'
+    _title: ''
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+weshare.fulfilled-support:
+  path: '/ajax/fulfilled-support'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::fulfilledSupportHandler'
+    _title: ''
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+weshare.approve_need:
+  path: '/need/{nid}/approve'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::approveDataHandler'
+    _title: ''
+  methods: [GET]
+  requirements:
+   _access: 'TRUE'
+   _role: administrator+agency_admin
+
+weshare.approve_service:
+  path: '/service/{nid}/approve'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::approveDataHandler'
+    _title: ''
+  methods: [GET]
+  requirements:
+   _access: 'TRUE'
+   _role: administrator+agency_admin
+
+weshare.reject_need:
+  path: '/need/{nid}/reject'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::rejectDataHandler'
+    _title: ''
+  methods: [GET]
+  requirements:
+   _access: 'TRUE'
+   _role: administrator+agency_admin
+
+weshare.reject_service:
+  path: '/service/{nid}/reject'
+  defaults:
+    _controller: '\Drupal\weshare\Controller\WeshareController::rejectDataHandler'
+    _title: ''
+  methods: [GET]
+  requirements:
+   _access: 'TRUE'
+   _role: administrator+agency_admin

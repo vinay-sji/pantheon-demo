@@ -1,0 +1,29 @@
+uuid: da20d6ff-4ab3-42ce-8561-2f1b9101c6ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categories
+    - node.type.needs
+    - taxonomy.vocabulary.need
+id: node.needs.field_categories
+field_name: field_categories
+entity_type: node
+bundle: needs
+label: Categories
+description: 'Please help us to classify this need. Select a category from the list Above.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      need: need
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

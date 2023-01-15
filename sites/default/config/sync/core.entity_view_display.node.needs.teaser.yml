@@ -1,0 +1,65 @@
+uuid: 25fa8b17-beae-4fd5-8011-2ed71a20e6cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.needs.body
+    - field.field.node.needs.field_agencies_list
+    - field.field.node.needs.field_approved
+    - field.field.node.needs.field_case_num
+    - field.field.node.needs.field_categories
+    - field.field.node.needs.field_created_by_agency
+    - field.field.node.needs.field_documents
+    - field.field.node.needs.field_mediaimage
+    - field.field.node.needs.field_need_type
+    - field.field.node.needs.field_needed
+    - field.field.node.needs.field_rejected
+    - field.field.node.needs.field_title
+    - field.field.node.needs.field_user_comments
+    - field.field.node.needs.field_value
+    - field.field.node.needs.field_vibility
+    - field.field.node.needs.field_video_audio
+    - field.field.node.needs.field_video_url
+    - field.field.node.needs.field_visibility
+    - node.type.needs
+  module:
+    - text
+    - user
+id: node.needs.teaser
+targetEntityType: node
+bundle: needs
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_agencies_list: true
+  field_approved: true
+  field_case_num: true
+  field_categories: true
+  field_created_by_agency: true
+  field_documents: true
+  field_mediaimage: true
+  field_need_type: true
+  field_needed: true
+  field_rejected: true
+  field_title: true
+  field_user_comments: true
+  field_value: true
+  field_vibility: true
+  field_video_audio: true
+  field_video_url: true
+  field_visibility: true
+  private_message_link: true

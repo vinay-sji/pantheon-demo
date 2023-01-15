@@ -1,0 +1,56 @@
+uuid: 0814e8c5-829f-466e-a9f1-f9f3d606ab3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.private_message.private_message.field_title
+  module:
+    - private_message
+    - text
+_core:
+  default_config_hash: bY60CRy-1iA05ELhvP1G7mki9KT4YbhNEoh-HzFbwAw
+id: private_message.private_message.default
+targetEntityType: private_message
+bundle: private_message
+mode: default
+content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: short
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_title:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  message:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  owner:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: private_message_author
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  timestamp:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

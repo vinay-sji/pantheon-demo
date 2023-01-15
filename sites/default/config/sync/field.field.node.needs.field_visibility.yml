@@ -1,0 +1,23 @@
+uuid: 315ed1d4-3a95-420f-9708-8457fb869809
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visibility
+    - node.type.needs
+id: node.needs.field_visibility
+field_name: field_visibility
+entity_type: node
+bundle: needs
+label: Visible
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

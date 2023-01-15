@@ -1,0 +1,21 @@
+uuid: c59b0207-180f-4e7a-afb4-e091ad287f94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_need_type
+    - node.type.needs
+  module:
+    - options
+id: node.needs.field_need_type
+field_name: field_need_type
+entity_type: node
+bundle: needs
+label: 'Need Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

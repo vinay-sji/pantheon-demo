@@ -1,0 +1,15 @@
+uuid: e42db052-944d-415e-a0d3-33c15b92c22e
+langcode: en
+status: true
+dependencies: {  }
+name: need_service_image_600x400
+label: 'Need Service Image 600x400'
+effects:
+  60484477-ff28-48e4-984a-04f603bb2079:
+    uuid: 60484477-ff28-48e4-984a-04f603bb2079
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

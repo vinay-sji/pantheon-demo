@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 83fee9c6-c3e1-4de3-87fc-a4b392dae3c1
+name: 4weshare
+mail: jairaj.lotlikar@sjinnovation.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/106
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: jairaj.lotlikar@sjinnovation.com

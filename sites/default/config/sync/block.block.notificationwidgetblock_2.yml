@@ -1,0 +1,33 @@
+uuid: 646a3eb6-0760-4567-8823-ca0d989b89a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - notifications_widget
+    - user
+  theme:
+    - tara_childtheme
+id: notificationwidgetblock_2
+theme: tara_childtheme
+region: primary_menu
+weight: -5
+provider: null
+plugin: notification_widget_block
+settings:
+  id: notification_widget_block
+  label: 'Notification widget block'
+  label_display: '0'
+  provider: notifications_widget
+  block_notification_type: '1'
+  block_notification_logs_display: 0
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      superadmin: superadmin
+      agency_admin: agency_admin
+      worker: worker

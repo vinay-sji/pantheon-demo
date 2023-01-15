@@ -1,0 +1,30 @@
+uuid: aa0087d2-070a-4f59-98ac-0aafcab01af6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.private_message.inbox
+    - field.field.private_message.private_message.field_title
+  module:
+    - private_message
+_core:
+  default_config_hash: T49nARPshtaO8dImQQbA7lsLVPomuhVyR20tprP1s7U
+id: private_message.private_message.inbox
+targetEntityType: private_message
+bundle: private_message
+mode: inbox
+content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_title: true
+  message: true
+  owner: true

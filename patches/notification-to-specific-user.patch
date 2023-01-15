@@ -1,0 +1,19 @@
+diff --git a/notificationswidget/src/Services/NotificationsWidgetService.php b/notificationswidget/src/Services/NotificationsWidgetService.php
+index fdf33be..a22b0d1 100644
+--- a/notificationswidget/src/Services/NotificationsWidgetService.php
++++ b/notificationswidget/src/Services/NotificationsWidgetService.php
+@@ -100,10 +100,12 @@ class NotificationsWidgetService {
+   /**
+    * Stores the data into notification table.
+    */
+-  public function logNotification($message, $userAction, $entity) {
++  public function logNotification($message, $userAction, $entity, $uid = NULL) {
+     // Get logged user session.
+     $currentUser = $this->currentUser;
+-    if ($entity->bundle() == 'user') {
++    if($uid) {
++      $entityUid = $uid;
++    }elseif ($entity->bundle() == 'user') {
+       $entityUid = $entity->id();
+     }
+     elseif (method_exists($entity, 'getOwner')) {

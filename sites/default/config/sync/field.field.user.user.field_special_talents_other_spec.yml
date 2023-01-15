@@ -1,0 +1,20 @@
+uuid: 072269ef-b26e-48b8-98eb-a774eee17951
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_special_talents_other_spec
+  module:
+    - user
+id: user.user.field_special_talents_other_spec
+field_name: field_special_talents_other_spec
+entity_type: user
+bundle: user
+label: 'Special Talents/other special skills'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

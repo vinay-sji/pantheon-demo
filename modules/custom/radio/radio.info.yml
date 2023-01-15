@@ -1,0 +1,5 @@
+name: radio module 
+type: module
+description: radio module to remove N/A options
+package: Custom
+core_version_requirement: ^8 || ^9

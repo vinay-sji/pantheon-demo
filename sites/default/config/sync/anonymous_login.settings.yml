@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: ZKVq7lpyGFQf-SCuj_Ng2yLPD24rKHxz-TzGQxBjLl4
+paths: "~user/register\r\n~user/password\r\n~legal\r\n*\r\n"
+login_path: /user/login
+message: ''

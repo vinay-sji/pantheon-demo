@@ -1,0 +1,21 @@
+uuid: 3a921b7e-0f78-4c73-9767-ce22f7cc567c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_needed
+    - node.type.needs
+  module:
+    - datetime
+id: node.needs.field_needed
+field_name: field_needed
+entity_type: node
+bundle: needs
+label: Needed
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

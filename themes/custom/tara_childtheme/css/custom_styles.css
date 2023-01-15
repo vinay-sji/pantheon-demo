@@ -1,0 +1,217 @@
+/* custom styling for needs view*/
+.views-view-grid {
+  padding: 30px 0;
+}
+
+.views-view-grid > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.views .span.views-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.views-field-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.views-view-grid .views-col {
+  margin-bottom: 30px;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+}
+
+.shs-container .shs-select {
+  padding: 9px 0;
+}
+
+form.views-exposed-form .js-form-item {
+  display: inline-block;
+  text-align: -webkit-center;
+}
+
+.js-form-item-field-service-category-target-id, .js-form-item-field-categories-target-id {
+  display: block !important;
+  text-align: left !important;
+}
+
+/* end */
+fieldset#edit-field-agencies-list--wrapper, fieldset#edit-field-agencies-list--wrapper {
+  height: 129px;
+  overflow: auto;
+  width: 100px;
+}
+
+.dropdown-menu.notify-drop .drop-content li a.fulfill-btn {
+  background-color: var(--theme-dark-blue) !important;
+  color: #fff !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00D775), to(#00BD68));
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 34px;
+  line-height: 34px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 50%;
+  z-index: 9;
+  border: 0;
+}
+
+.dropdown-menu.notify-drop .drop-content li a.fulfill-btn:hover {
+  background-color: var(--theme-light-blue) !important;
+}
+
+a.fulfill-btn {
+  background-color: var(--theme-dark-blue) !important;
+  color: #fff !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00D775), to(#00BD68));
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 34px;
+  line-height: 34px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+}
+
+a.fulfill-btn:hover {
+  background-color: var(--theme-light-blue) !important;
+}
+
+a.fulfill {
+  background-color: var(--theme-dark-blue) !important;
+  color: #fff !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00D775), to(#00BD68));
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 34px;
+  line-height: 34px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+}
+
+a.fulfill:hover {
+  background-color: var(--theme-light-blue) !important;
+}
+
+a.fulfilled, a.fulfilled-s {
+  background-color: var(--theme-dark-blue) !important;
+  color: #fff !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00D775), to(#00BD68));
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 34px;
+  line-height: 34px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+}
+
+div#edit-comment-body-0-format {
+  display: none;
+}
+
+div#edit-message-0-format {
+  display: none;
+}
+
+input#edit-back {
+  float: right;
+}
+
+input[id^="edit-back--"] {
+  float: right;
+}
+
+span.clear-all-notification {
+  display: none;
+}
+
+h4.label {
+  color: black;
+}
+
+span.pm-username-remove-link {
+  position: absolute;
+  margin-left: -1000px;
+}
+/*# sourceMappingURL=custom_styles.css.map */

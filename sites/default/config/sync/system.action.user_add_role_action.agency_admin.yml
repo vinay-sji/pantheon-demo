@@ -1,0 +1,14 @@
+uuid: 54691e27-efe7-468b-a143-8722c8fbf586
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.agency_admin
+  module:
+    - user
+id: user_add_role_action.agency_admin
+label: 'Add the Agency Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: agency_admin

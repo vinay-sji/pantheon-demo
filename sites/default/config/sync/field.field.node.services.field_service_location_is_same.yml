@@ -1,0 +1,23 @@
+uuid: 738a91a4-7249-4beb-a1d6-07c2a5e89bf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_location_is_same
+    - node.type.services
+id: node.services.field_service_location_is_same
+field_name: field_service_location_is_same
+entity_type: node
+bundle: services
+label: 'Location is the same as my address'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

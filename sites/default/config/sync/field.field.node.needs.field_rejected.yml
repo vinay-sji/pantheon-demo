@@ -1,0 +1,23 @@
+uuid: 7277594f-b281-4fe0-89a3-fb5f640eaba8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rejected
+    - node.type.needs
+id: node.needs.field_rejected
+field_name: field_rejected
+entity_type: node
+bundle: needs
+label: Rejected
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

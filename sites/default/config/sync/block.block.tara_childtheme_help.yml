@@ -1,0 +1,22 @@
+uuid: 45bdb0e8-f0d8-4906-bed4-fdb81154ef5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tara_childtheme
+_core:
+  default_config_hash: iyuQj9HP7TudJqR2BDGoGXEn16NE3m1KUtCw0N5ZTMM
+id: tara_childtheme_help
+theme: tara_childtheme
+region: content
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

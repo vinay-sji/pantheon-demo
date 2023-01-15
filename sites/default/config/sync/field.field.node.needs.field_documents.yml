@@ -1,0 +1,27 @@
+uuid: 7d859a7a-8d85-47f1-9ab6-01199c014b20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documents
+    - node.type.needs
+  module:
+    - file
+id: node.needs.field_documents
+field_name: field_documents
+entity_type: node
+bundle: needs
+label: Documents
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc pdf pptx ppt xls docx rtf zip'
+  max_filesize: ''
+  description_field: false
+field_type: file

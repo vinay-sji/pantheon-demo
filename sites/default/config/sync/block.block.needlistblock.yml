@@ -1,0 +1,25 @@
+uuid: 38f9bdb7-68a7-4e41-b7ae-63db7f611a4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - weshare
+  theme:
+    - tara_childtheme
+id: needlistblock
+theme: tara_childtheme
+region: content
+weight: 0
+provider: null
+plugin: need_list_block
+settings:
+  id: need_list_block
+  label: 'Need List block'
+  label_display: '0'
+  provider: weshare
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /page/outstanding-need

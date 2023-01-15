@@ -1,0 +1,23 @@
+uuid: 227b94a6-7d18-4f98-bc4c-10bbd41eeeb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_value
+    - node.type.needs
+id: node.needs.field_value
+field_name: field_value
+entity_type: node
+bundle: needs
+label: Value
+description: 'Enter a whole number. No decimals are accepted.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

@@ -1,0 +1,31 @@
+form.views-exposed-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .form-item-title {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left !important;
+    }
+
+    & #edit-field-value-value-wrapper {
+        width: 67%;
+        border: 0;
+        text-align: left;
+
+        .fieldset-wrapper {
+            display: flex;
+            justify-content: left;
+        }
+    }
+
+
+    & .form-item-field-categories-target-id {
+        display: unset;
+        width: 100%;
+    }
+}

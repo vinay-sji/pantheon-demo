@@ -1,0 +1,20 @@
+uuid: e5064164-0951-4a6f-b6ac-73d8a26659b6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tara_subtheme
+_core:
+  default_config_hash: XRdb8LpbArVA6CpuuEZxzi50JIdjsJaCCZ5o3fH0Blk
+id: tara_subtheme_local_actions
+theme: tara_subtheme
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

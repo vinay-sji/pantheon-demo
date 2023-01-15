@@ -1,0 +1,20 @@
+uuid: ab5cc251-71fd-4205-a622-4df7eee7f8c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_agency_company
+field_name: field_agency_company
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: d4d8654f-a56e-4126-8dd2-c9e3e65fe0aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_offer_expires
+    - node.type.services
+  module:
+    - datetime
+id: node.services.field_service_offer_expires
+field_name: field_service_offer_expires
+entity_type: node
+bundle: services
+label: 'Offer expires'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

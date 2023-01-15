@@ -1,0 +1,27 @@
+uuid: 367efdc2-46e0-4558-8e35-30b4de9bc0cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_document
+    - node.type.services
+  module:
+    - file
+id: node.services.field_service_document
+field_name: field_service_document
+entity_type: node
+bundle: services
+label: Documents
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt zip doc docx pdf rtf ppt pptx'
+  max_filesize: 2MB
+  description_field: false
+field_type: file

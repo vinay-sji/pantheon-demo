@@ -1,0 +1,30 @@
+uuid: 5bd27afd-6a4f-41a3-9e07-829f69b5463b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_create_agency_or_company
+    - taxonomy.vocabulary.agency
+  module:
+    - user
+id: user.user.field_create_agency_or_company
+field_name: field_create_agency_or_company
+entity_type: user
+bundle: user
+label: 'Create Agency or Company'
+description: 'Add agency if not listed above'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      agency: agency
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

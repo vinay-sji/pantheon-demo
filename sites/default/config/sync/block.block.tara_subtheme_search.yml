@@ -1,0 +1,23 @@
+uuid: 1c68df26-487e-4d61-a97e-cf827b4f9921
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - tara_subtheme
+_core:
+  default_config_hash: jQ-C8l3dJPqYCGST1e-kSjR14PDP4wq-iFbp8dMFcRo
+id: tara_subtheme_search
+theme: tara_subtheme
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: visible
+  provider: search
+  page_id: node_search
+visibility: {  }

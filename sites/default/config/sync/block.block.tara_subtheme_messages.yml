@@ -1,0 +1,22 @@
+uuid: 32481a54-18ce-4906-88b2-6e5b6a1184a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tara_subtheme
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: tara_subtheme_messages
+theme: tara_subtheme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

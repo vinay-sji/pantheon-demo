@@ -1,0 +1,19 @@
+uuid: 93916d42-4599-4e6d-90ac-74e9e8307000
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_created_by_agency
+    - node.type.needs
+id: node.needs.field_created_by_agency
+field_name: field_created_by_agency
+entity_type: node
+bundle: needs
+label: 'Created By Agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

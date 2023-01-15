@@ -1,0 +1,5 @@
+name: weshare module 
+type: module
+description: weshare module to enable template suggestions
+package: Custom
+core_version_requirement: ^8 || ^9

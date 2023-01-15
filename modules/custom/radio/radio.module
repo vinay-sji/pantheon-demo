@@ -1,0 +1,15 @@
+<?php
+
+function radio_options_list_alter(array &$options, array $context) {
+    unset($options['_none']);
+}
+
+  /**
+ * Implements form_alter to change label().
+ */
+
+function radio_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    if($form_id == 'node_needs_form' || $form_id == 'node_needs_edit_form') {
+        $form['group_classification']['checkallfield-agencies-list']['#title']= t('Check / Uncheck All Agencies');
+    }
+  }

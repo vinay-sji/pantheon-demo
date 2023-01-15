@@ -1,0 +1,23 @@
+uuid: 26d291b1-2504-4fd6-8824-8f7fed871c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vibility
+    - node.type.needs
+  module:
+    - options
+id: node.needs.field_vibility
+field_name: field_vibility
+entity_type: node
+bundle: needs
+label: Status
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: Active
+default_value_callback: ''
+settings: {  }
+field_type: list_string

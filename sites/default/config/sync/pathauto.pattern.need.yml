@@ -1,0 +1,22 @@
+uuid: 743869b5-76c7-43a7-9902-ecaa406b7a9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: need
+label: need
+type: 'canonical_entities:node'
+pattern: 'need/[node:title]'
+selection_criteria:
+  1f393630-2a48-495d-80b5-4211dacd09a5:
+    id: node_type
+    negate: false
+    uuid: 1f393630-2a48-495d-80b5-4211dacd09a5
+    context_mapping:
+      node: node
+    bundles:
+      needs: needs
+selection_logic: and
+weight: -5
+relationships: {  }

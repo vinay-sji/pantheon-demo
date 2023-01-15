@@ -1,0 +1,29 @@
+uuid: 8eb43456-13e1-4e69-bc54-599e75d52213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_protection_settings_servi
+    - node.type.services
+id: node.services.field_protection_settings_servi
+field_name: field_protection_settings_servi
+entity_type: node
+bundle: services
+label: 'Select User'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: field_first_name
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: false
+field_type: entity_reference

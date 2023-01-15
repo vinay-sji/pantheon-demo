@@ -1,0 +1,33 @@
+uuid: 979c0ed3-fd2c-4160-b693-1b0d00e33d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - rest.resource.notifications_update_widget
+  module:
+    - comment
+    - contact
+    - filter
+    - legal
+    - rest
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'restful post notifications_update_widget'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view Terms and Conditions'

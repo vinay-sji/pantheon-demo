@@ -1,0 +1,29 @@
+uuid: ffdbe0d2-4254-4559-9acc-09530bb4cf7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_agencies
+    - node.type.services
+    - taxonomy.vocabulary.agency
+id: node.services.field_service_agencies
+field_name: field_service_agencies
+entity_type: node
+bundle: services
+label: Agencies
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      agency: agency
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

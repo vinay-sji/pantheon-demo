@@ -1,0 +1,23 @@
+uuid: 7375832b-e238-47d7-acc9-99cce19b9e57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_pick_up_service_lo
+    - node.type.services
+  module:
+    - text
+id: node.services.field_service_pick_up_service_lo
+field_name: field_service_pick_up_service_lo
+entity_type: node
+bundle: services
+label: 'Pick up / service location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary
